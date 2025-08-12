@@ -1,7 +1,8 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [
-    ".astro/types.d.ts",
+    "src",
+    "**/*.d.ts",
     "**/*"
   ],
   "exclude": [
@@ -16,6 +17,7 @@
       "@images/*": [
         "src/images/*"
       ],
+      "types": ["vite/client"],
       "@layouts/*": [
         "src/layouts/*"
       ],

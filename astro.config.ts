@@ -11,7 +11,8 @@ import updateConfig from "./src/scripts/integration.ts";
 import solidJs from "@astrojs/solid-js";
 
 export default defineConfig({
-  site: themeConfig.site.url,
+    site: 'https://huanshan0909.github.io',
+    base: 'MyBlog',
 
   vite: {
     plugins: [tailwindcss()],
