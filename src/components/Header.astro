@@ -1,0 +1,53 @@
+---
+import { themeConfig } from "@config";
+
+const { page } = Astro.props;
+---
+
+<header>
+  <nav
+    class="mb-10 flex items-center justify-between py-4 font-mono"
+    id="navigation"
+  >
+    <a class="text-lg font-bold" href="/">{themeConfig.site.title}</a>
+    <div class="text-neutral flex gap-4">
+      {
+        themeConfig.nav.map((item) => {
+          if (item.name === page) {
+            return (
+              <a class="text-primary font-bold" href={item.url}>
+                {item.name}
+              </a>
+            );
+          } else {
+            return (
+              <a class="hover" href={item.url}>
+                {item.name}
+              </a>
+            );
+          }
+        })
+      }
+      <!-- <span> | </span> -->
+      <a class="hover" href="javascript:SearchWidget.open()">
+        <span class="icon-[fa-solid--search] iconify-inline"></span>
+      </a>
+      {
+        themeConfig.global.i18n && (
+          <a class="hover" href="/en">
+            EN
+          </a>
+        )
+      }
+    </div>
+  </nav>
+</header>
+
+<style>
+  @reference "@styles/main.css";
+  /* @reference "tailwindcss"; */
+
+  .hover {
+    @apply hover:text-primary transition duration-300 hover:font-bold;
+  }
+</style>
