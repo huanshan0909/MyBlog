@@ -1,7 +1,7 @@
 site:
   url: "https://example.com"
   title: "Sora"
-  author: "Liks"
+  author: "Shans"
   description: "A blog theme built with Astro"
   favicon: "favicon.ico"
 global:
@@ -19,7 +19,7 @@ nav:
     url: "/about"
 footer:
   copyright:
-    owner: "Liks"
+    owner: "Shans"
     time: "2024 - 2025"
   beian:
     icp:

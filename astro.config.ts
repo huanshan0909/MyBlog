@@ -12,7 +12,6 @@ import solidJs from "@astrojs/solid-js";
 
 export default defineConfig({
     site: 'https://huanshan0909.github.io',
-    base: 'MyBlog',
 
   vite: {
     plugins: [tailwindcss()],
